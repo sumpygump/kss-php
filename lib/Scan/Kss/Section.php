@@ -132,11 +132,12 @@ class Section
     /**
      * Returns the markup for the normal element (without modifierclass)
      *
+     * @param string $replacement Replacement for $modifierClass variable
      * @return void
      */
-    public function getMarkupNormal()
+    public function getMarkupNormal($replacement = '')
     {
-        return str_replace('$modifierClass', '', $this->getMarkup());
+        return str_replace('$modifierClass', $replacement, $this->getMarkup());
     }
 
     /**

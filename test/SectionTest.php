@@ -73,6 +73,24 @@ comment;
     /**
      * @test
      */
+    public function getMarkupNormalEmpty()
+    {
+        $expected = '<div class=""></div>';
+        $this->assertEquals($expected, self::$section->getMarkupNormal());
+    }
+
+    /**
+     * @test
+     */
+    public function getMarkupNormalReplacement()
+    {
+        $expected = '<div class="{class}"></div>';
+        $this->assertEquals($expected, self::$section->getMarkupNormal('{class}'));
+    }
+
+    /**
+     * @test
+     */
     public function getMarkupMultiLine()
     {
         $commentText = <<<comment

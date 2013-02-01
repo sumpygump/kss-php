@@ -42,6 +42,6 @@
     </div>
 
     <div class="styleguide__html">
-        <pre class="styleguide__code"><code><?php echo htmlentities($section->getMarkupNormal()); ?></code></pre>
+        <pre class="styleguide__code"><code><?php echo htmlentities($section->getMarkupNormal('{class}')); ?></code></pre>
     </div>
 </div>
