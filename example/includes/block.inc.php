@@ -34,7 +34,7 @@
             <?php echo $section->getMarkupNormal(); ?>
         </div>
         <?php foreach ($section->getModifiers() as $modifier) { ?>
-            <div class="styleguide__element styleguide__element--modifier <?php ($modifier->isExtender()) ? 'styleguide__element--extender' : ''; ?>">
+            <div class="styleguide__element styleguide__element--modifier <?php echo ($modifier->isExtender()) ? 'styleguide__element--extender' : ''; ?>">
                 <span class="styleguide__element__modifier-label <?php echo ($modifier->isExtender()) ? 'styleguide__element__modifier-label--extender' : ''; ?>"><?php echo $modifier->getName(); ?></span>
                 <?php echo $modifier->getExampleHtml(); ?>
             </div>
