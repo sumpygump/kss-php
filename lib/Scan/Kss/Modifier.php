@@ -224,7 +224,8 @@ class Modifier
             $pattern = sprintf('/(?<="| )%s(?="| )/', $this->getExtendedClassName());
             $html = preg_replace(
                 $pattern,
-                $this->getClassName(), $html
+                $this->getClassName(),
+                $html
             );
         }
 
