@@ -157,6 +157,29 @@ comment;
     /**
      * @test
      */
+    public function getModifiersDescriptionContainsDelimiter()
+    {
+        $commentText = <<<comment
+# Form Button
+
+Your standard form button.
+
+.smaller - A smaller button - really small
+
+Styleguide 2.1.1.
+comment;
+
+        $testSection = new Section($commentText);
+        $modifiers = $testSection->getModifiers();
+        $description = $modifiers[0]->getDescription();
+        $expected = 'A smaller button - really small';
+
+        $this->assertEquals($expected, $description);
+    }
+
+    /**
+     * @test
+     */
     public function getSection()
     {
         $this->assertEquals('2.1.1', self::$section->getSection());
